@@ -33,9 +33,9 @@ class _profilUserState extends State<profilUser> {
       appBar: AppBar(
         leading:IconButton(icon: const Icon(Icons.arrow_left, color: Colors.black),
         onPressed: () async 
-        {Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) =>  Home())); },
+       // {Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) =>  Home())); },
        // {Get.back();},
-       //{Navigator.pop(context);},
+        {Navigator.pop(context);},
         ),
         backgroundColor : Colors.white, 
         title: const Text('Travel App',style: TextStyle(color: Colors.black),),
@@ -60,7 +60,8 @@ class _profilUserState extends State<profilUser> {
              onPressed:() async
             { 
                await _auth.signOut();
-                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const authentication()));
+              // Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const authentication()));
+              Navigator.pop(context);
             },
                endicon:false, textcolor: Colors.red),
             ]
